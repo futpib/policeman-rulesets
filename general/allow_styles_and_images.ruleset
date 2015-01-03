@@ -1,0 +1,13 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_styles_and_images"
+
+l10n:
+  en-US:
+    name: "Allow styles and images"
+    description: "Allow styles and images from anywhere"
+
+rules:
+  web -> web:
+    [contentType] (STYLESHEET|IMAGE): ACCEPT
