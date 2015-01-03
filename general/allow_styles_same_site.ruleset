@@ -1,0 +1,18 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_styles_same_site"
+
+l10n:
+  en-US:
+    name: "Allow styles from same and same second-level domain"
+    description: ""
+
+rules:
+  [contentType] STYLESHEET:
+    [schemeType] web -> web:
+      [host]
+      /(.+\.)?(.+\..+)/ -> $2: ACCEPT
+      /(.+\.)?(.+\..+)/ -> *.$2: ACCEPT
+
+

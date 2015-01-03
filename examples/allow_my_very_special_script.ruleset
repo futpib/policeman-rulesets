@@ -1,0 +1,12 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_my_very_special_script"
+ 
+l10n:
+  en-US:
+    name: "Allows a script at http://a.b/cde/script.js"
+    description: ""
+ 
+rules:
+  [spec] * -> "http://a.b/cde/script.js": ACCEPT

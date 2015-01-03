@@ -1,0 +1,14 @@
+magic: policeman_ruleset
+version: 0.1
+id: "captcha_services"
+
+l10n:
+  en-US:
+    name: "Allow various captchas"
+    description: ""
+
+rules:
+  web -> web:
+    # Google reCAPTCHA
+    -> (google.com|*.google.com):
+      -> "/recaptcha/api/" *: ACCEPT
