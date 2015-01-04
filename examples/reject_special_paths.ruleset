@@ -1,0 +1,18 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "reject_special_paths"
+
+l10n:
+  en-US:
+    name: "Blocks some paths"
+    description: ""
+
+rules:
+  # applies to any from web to web requests (http -> https, https -> ftp etc.)
+  web -> web:
+    [path]
+    # Block exactly the "/ad" path
+    -> "/ad": REJECT
+    # Block any path that starts with "/_stats"
+    -> "/_stats" *: REJECT
