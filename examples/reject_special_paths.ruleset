@@ -14,5 +14,8 @@ rules:
     [path]
     # Block exactly the "/ad" path
     -> "/ad": REJECT
+    # Block any path that contain "/ads/" or "/adv/"
+    -> * "/ads/" *: REJECT
+    -> * "/adv/" *: REJECT
     # Block any path that starts with "/_stats"
     -> "/_stats" *: REJECT
