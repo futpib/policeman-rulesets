@@ -1,0 +1,16 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_styles"
+
+l10n:
+  en-US:
+    name: "Allow styles"
+    description: "Allow styles from anywhere"
+  de-DE:
+    name: "Erlaube Stile"
+    description: "Erlaubt Stile von Überall"
+
+rules:
+  web -> web:
+    [contentType] STYLESHEET: ACCEPT
