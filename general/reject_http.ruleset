@@ -1,0 +1,13 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "reject_http"
+
+l10n:
+  en-US:
+    name: "Reject all HTTP requests"
+    description: ""
+
+rules:
+  -> web:
+    [scheme] -> http: REJECT
