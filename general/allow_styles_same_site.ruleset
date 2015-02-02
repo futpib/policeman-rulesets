@@ -11,8 +11,6 @@ l10n:
 rules:
   [contentType] STYLESHEET:
     [schemeType] web -> web:
-      [host]
-      /(.+\.)?(.+\..+)/ -> $2: ACCEPT
-      /(.+\.)?(.+\..+)/ -> *.$2: ACCEPT
+      [baseDomain] * -> $&: ACCEPT
 
 

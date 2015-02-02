@@ -6,11 +6,9 @@ id: "allow_styles_and_images_same_site"
 l10n:
   en-US:
     name: "Allow styles and images from same site"
-    description: "Allow styles and images from same and same second-level domain"
+    description: "Allow styles and images from same second-level domain"
 
 rules:
   [contentType] (STYLESHEET|IMAGE):
     [schemeType] web -> web:
-      [host]
-      /(.+\.)?(.+\..+)/ -> $2: ACCEPT
-      /(.+\.)?(.+\..+)/ -> *.$2: ACCEPT
+      [baseDomain] * -> $&: ACCEPT
