@@ -1,0 +1,14 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_redirects_same_site"
+
+l10n:
+  en-US:
+    name: "Allow same site redirects"
+    description: ""
+
+rules:
+  web -> web:
+    [hints] redirect:
+      [baseDomain] * -> $&: ACCEPT
