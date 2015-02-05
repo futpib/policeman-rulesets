@@ -1,0 +1,16 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_hosts_that_look_like_cdns"
+
+l10n:
+  en-US:
+    name: "Allow CDNs"
+    description: "Allow requests to hosts that looks like CDNs"
+
+rules:
+  web -> web:
+    [contentType] (STYLESHEET|IMAGE):
+      [host] * -> (*cdn*|*static*): ACCEPT
+    [contentType] SCRIPT:
+      [host] * -> *api*: ACCEPT
