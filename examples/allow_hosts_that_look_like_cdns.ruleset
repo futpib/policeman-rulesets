@@ -10,7 +10,8 @@ l10n:
 
 rules:
   web -> web:
-    [contentType] (STYLESHEET|IMAGE):
+    [contentType]
+    (STYLESHEET|IMAGE):
       [host] * -> (*cdn*|*static*): ACCEPT
-    [contentType] SCRIPT:
+    SCRIPT:
       [host] * -> *api*: ACCEPT
