@@ -1,0 +1,13 @@
+magic: policeman_ruleset
+version: 0.1
+id: "allow_styles_and_images_and_fonts_same_site"
+
+l10n:
+  en-US:
+    name: "Allow styles, images, and fonts from same site"
+    description: "Allow styles, images, and fonts from same second-level domain"
+
+rules:
+  [contentType] (STYLESHEET|IMAGE|FONT):
+    [schemeType] web -> web:
+      [baseDomain] * -> $&: ACCEPT
