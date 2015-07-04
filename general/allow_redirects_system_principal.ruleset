@@ -1,0 +1,13 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_redirects_system_principal"
+
+l10n:
+  en-US:
+    name: "Allow redirects for requests issued by browser or addons"
+    description: ""
+
+rules:
+  [specialPrincipal] system:
+    [hints] redirect: ACCEPT

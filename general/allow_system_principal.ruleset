@@ -1,0 +1,12 @@
+
+magic: policeman_ruleset
+version: 0.1
+id: "allow_system_principal"
+
+l10n:
+  en-US:
+    name: "Allow any requests issued by browser or addons"
+    description: ""
+
+rules:
+  [specialPrincipal] system: ACCEPT
